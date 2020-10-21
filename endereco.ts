@@ -23,6 +23,7 @@ export class Endereco {
         }
     }
 
+    
     public dados_endereco(): string {
 
         this.validar_dados_obrigatorios()

@@ -15,6 +15,7 @@ export class Venda {
         private itens : Array<Item> = [],
         private pagamento : Pagamento = new Pagamento("", 0, 0)) { }
 
+
     public valida_dados_obrigatorios(): void {
 
         if (!this.dataHora){
@@ -77,6 +78,7 @@ export class Venda {
         return prejuizo;
     } 
 
+
     public impostos() : string {
 
         const federal = 7.54
@@ -88,6 +90,7 @@ export class Venda {
 
         return `Lei 12.741, Valor aprox.,Imposto F=${calcFed.toFixed(2)} (${federal}%),E=${calcEst.toFixed(2)} (${estadual}%)`
     }
+
 
     public dados_venda() : string {
 
@@ -102,11 +105,13 @@ export class Venda {
         return `${datahora} ${_ccf} ${_coo}`
     }
 
+
     public montarPagamento(metodoPagamento: string, valorRecebido: number) {
 
         let valorCompra = this.totalCompra()
         this.pagamento = new Pagamento(metodoPagamento, valorRecebido, valorCompra)
     }
+
 
     public imprimeCupom(): string {
         this.valida_dados_obrigatorios();
@@ -128,5 +133,4 @@ ${infoFormaPag} ${infoValorRecebido}
 Troco R$ ${infoTroco}
 ${infoImposto}`;
     }
-
 }  

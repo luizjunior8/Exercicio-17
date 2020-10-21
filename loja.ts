@@ -1,6 +1,7 @@
 import { Endereco } from "./endereco";
 import { Venda } from "./venda";
 
+
 export class Loja {
 
     constructor(
@@ -20,6 +21,7 @@ export class Loja {
         return venda;
     }
 
+
     public valida_dados_obrigatorios(): void {
     
         if (!this.nome_loja){
@@ -32,6 +34,7 @@ export class Loja {
             throw new Error (`O campo inscrição estadual da loja é obrigatório`)
         }
     }
+
 
     public dados_loja(): string {
 
@@ -54,7 +57,6 @@ ${this.endereco.dados_endereco()}${_telefone}
 ${_observacao}
 ${_cnpj}
 ${_inscricao_estadual}
-`
-        
+`       
     }
 } 

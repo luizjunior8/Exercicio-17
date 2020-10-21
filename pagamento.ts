@@ -15,6 +15,7 @@ export class Pagamento {
         return this.valorRecebido;
     }
 
+
     public formaPagamento(): string {
 
         const credito : string = "Cartão de Crédito"
@@ -36,12 +37,14 @@ export class Pagamento {
         return pagamento
     }
 
+
     public validarPagamento(): void {
 
         if(this.valorTotal > this.valorRecebido){
             throw new Error ("O pagamento é insuficiente para a compra")
         }
     }
+    
     
     public calculaTroco(): number {
 

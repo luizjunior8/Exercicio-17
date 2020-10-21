@@ -2,7 +2,6 @@ import { Venda } from "./venda";
 import { Produto } from "./produto";
 
 
-
 export class Item {
 
     constructor (
@@ -33,7 +32,5 @@ export class Item {
         return `${this.getItem()} ${this.produto.getCodigo()} ${this.produto.getDescricao()} `+
                `${this.getQuantidade()} ${this.produto.getUnidade()} ${this.produto.getValorUnitario().toFixed(2)} `+
                `${this.produto.getSubstituicaoTributaria()} ${this.valor_final_item().toFixed(2)}\n`;
-    }
-
-    
+    }   
 }
